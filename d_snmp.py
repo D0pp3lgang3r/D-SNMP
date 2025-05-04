@@ -48,7 +48,7 @@ class SNMP_Brute_Forcer():
 		return False
 
 	def brute_force(self):
-		with open(self.wordlist, "r") as w:
+		with open(self.wordlist, "r",errors='replace') as w:
 			passwords = w.readlines()
 
 		for password in passwords:
